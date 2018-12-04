@@ -20,14 +20,14 @@ privileges on that web application.
     - Tested in version: 4.2.0
     - Fixed in version: 4.2.1
   - [x] GIF Walkthrough:  
-  ![gif1](https://imgur.com/a/nEKiWlx)
+  ![gif1](https://imgur.com/a/nEKiWlx.gif)
   - [x] Steps to recreate: 
         1. post " <a title='x onmouseover=alert(unescape(/hello%20world/.source))
 style=position:absolute;left:0;top:0;width:5000px;height:5000px
  AAAAAAAAAAAA [64 kb] ...'></a> " as comment
  
-  - [ ] Affected source code:
-    - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
+  - [x] Affected source code:
+    - [Link 1](https://klikki.fi/adv/wordpress2.html)
     
 2. (Required) Vulnerability Name or ID : WordPress <= 4.2.2 - Authenticated Stored Cross-Site Scripting (XSS)
   - [x] Summary: A stored XSS vulnerability in WordPress allows an user with the posting capability to compromise the website.
@@ -40,23 +40,30 @@ The malicious script is executed when an administrator views the page. From this
     - Tested in version: 4.2.0
     - Fixed in version:  4.2.3
   - [x] GIF Walkthrough: 
-  ![gif2](https://imgur.com/a/U65Gbiz)
+  ![gif2](https://imgur.com/a/U65Gbiz.gif)
   - [x] Steps to recreate: 
   1.  entered "<a href="[caption code=">]</a><a title=" onmouseover=alert('test')  ">link</a>
 " in a page or posting using the HTML edit mode. 
   2. save a move mouse over the hyperlink to show alert.
   
   - [x] Affected source code:
-    - [Link 1](https://codex.wordpress.org/Version_4.2.3)
-1. (Required) Vulnerability Name or ID
-  - [ ] Summary: 
-    - Vulnerability types:
-    - Tested in version:
-    - Fixed in version: 
-  - [ ] GIF Walkthrough: 
-  - [ ] Steps to recreate: 
-  - [ ] Affected source code:
-    - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
+    - [Link 2](https://codex.wordpress.org/Version_4.2.3)
+3. (Required) Vulnerability Name or ID : WordPress 3.6.0-4.7.2 - Authenticated Cross-Site Scripting (XSS) via Media File Metadata
+  - [x] Summary: Two Cross-Site Scripting vulnerabilities exists in the playlist
+functionality of WordPress. These issues can be exploited by convincing
+an Editor or Administrator into uploading a malicious MP3 file. Once
+uploaded the issues can be triggered by a Contributor or higher using
+the playlist shortcode.
+    - Vulnerability types: Authenticated Cross-Site Scripting (XSS)
+    - Tested in version: 4.2.0
+    - Fixed in version: 4.2.13
+  - [x] GIF Walkthrough: ![gif3](https://i.imgur.com/2Cv1dRL.gif)
+  - [x] Steps to recreate: 
+  1. upload MP3 file to the Media Library (as Editor or Administrator).
+  2. Insert an Audio Playlist in a Post containing this MP3 (Create Audio
+Playlist).
+  - [x] Affected source code:
+    - [Link 3](https://wordpress.org/news/2017/03/wordpress-4-7-3-security-and-maintenance-release/)
 1. (Optional) Vulnerability Name or ID
   - [ ] Summary: 
     - Vulnerability types:
