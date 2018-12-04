@@ -6,7 +6,7 @@ Time spent: **10** hours spent in total
 
 ## Pentesting Report
 
-1. (Required) Vulnerability Name or ID
+1. (Required) Vulnerability Name or ID  : WordPress <= 4.2 - Unauthenticated Stored Cross-Site Scripting (XSS)
   - [x] Summary: 
 By exploiting a Cross-site scripting vulnerability the attacker can
 hijack a logged in user’s session. This means that the malicious
@@ -19,7 +19,8 @@ privileges on that web application.
     - Vulnerability types:    Unauthenticated Stored Cross-Site Scripting (XSS)
     - Tested in version: 4.2.0
     - Fixed in version: 4.2.1
-  - [x] GIF Walkthrough: ![gif1](https://imgur.com/a/nEKiWlx)
+  - [x] GIF Walkthrough:  
+  ![gif1](https://imgur.com/a/nEKiWlx)
   - [x] Steps to recreate: 
         1. post " <a title='x onmouseover=alert(unescape(/hello%20world/.source))
 style=position:absolute;left:0;top:0;width:5000px;height:5000px
@@ -27,15 +28,26 @@ style=position:absolute;left:0;top:0;width:5000px;height:5000px
  
   - [ ] Affected source code:
     - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
-1. (Required) Vulnerability Name or ID
-  - [ ] Summary: 
-    - Vulnerability types:
-    - Tested in version:
-    - Fixed in version: 
-  - [ ] GIF Walkthrough: 
-  - [ ] Steps to recreate: 
-  - [ ] Affected source code:
-    - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
+    
+2. (Required) Vulnerability Name or ID : WordPress <= 4.2.2 - Authenticated Stored Cross-Site Scripting (XSS)
+  - [x] Summary: A stored XSS vulnerability in WordPress allows an user with the posting capability to compromise the website.
+
+Under default configuration, the attack requires a Contributor or Author level account. The attacker would insert specially formatted HTML containing JavaScript on a WordPress page or post. Some special configurations may allow posting or editing page content for unauthenticated users.
+
+The malicious script is executed when an administrator views the page. From this point on the attack could proceed to server-side code execution in the same way as with the other recently published WordPress XSS's.
+
+    - Vulnerability types: Authenticated Stored Cross-Site Scripting (XSS)
+    - Tested in version: 4.2.0
+    - Fixed in version:  4.2.3
+  - [x] GIF Walkthrough: 
+  ![gif2](https://imgur.com/a/U65Gbiz)
+  - [x] Steps to recreate: 
+  1.  entered "<a href="[caption code=">]</a><a title=" onmouseover=alert('test')  ">link</a>
+" in a page or posting using the HTML edit mode. 
+  2. save a move mouse over the hyperlink to show alert.
+  
+  - [x] Affected source code:
+    - [Link 1](https://codex.wordpress.org/Version_4.2.3)
 1. (Required) Vulnerability Name or ID
   - [ ] Summary: 
     - Vulnerability types:
