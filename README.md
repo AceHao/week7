@@ -1,18 +1,30 @@
 # Project 7 - WordPress Pentesting
 
-Time spent: **X** hours spent in total
+Time spent: **10** hours spent in total
 
 > Objective: Find, analyze, recreate, and document **five vulnerabilities** affecting an old version of WordPress
 
 ## Pentesting Report
 
 1. (Required) Vulnerability Name or ID
-  - [ ] Summary: 
-    - Vulnerability types:
-    - Tested in version:
-    - Fixed in version: 
-  - [ ] GIF Walkthrough: 
-  - [ ] Steps to recreate: 
+  - [x] Summary: 
+By exploiting a Cross-site scripting vulnerability the attacker can
+hijack a logged in user’s session. This means that the malicious
+hacker can change the logged in user’s password and invalidate the
+session of the victim while the hacker maintains access. As seen from
+the XSS example in this article, if a web application is vulnerable to
+cross-site scripting and the administrator’s session is hijacked, the
+malicious hacker exploiting the vulnerability will have full admin
+privileges on that web application.
+    - Vulnerability types:    Unauthenticated Stored Cross-Site Scripting (XSS)
+    - Tested in version: 4.2.0
+    - Fixed in version: 4.2.1
+  - [x] GIF Walkthrough: ![gif1](https://imgur.com/a/nEKiWlx)
+  - [x] Steps to recreate: 
+        1. post " <a title='x onmouseover=alert(unescape(/hello%20world/.source))
+style=position:absolute;left:0;top:0;width:5000px;height:5000px
+ AAAAAAAAAAAA [64 kb] ...'></a> " as comment
+ 
   - [ ] Affected source code:
     - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
 1. (Required) Vulnerability Name or ID
